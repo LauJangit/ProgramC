@@ -11,4 +11,16 @@
     android:background="@drawable/mainactivity_bg"
     tools:context="cn.jangit.programc.Activity.RankActivity.RankActivity">
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/rank_section">
+
+
+        </LinearLayout>
+
+
+
 </RelativeLayout>

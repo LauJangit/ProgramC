@@ -21,9 +21,7 @@ public class ChapterButton extends ImageButton{
                 screenWitdh/10*9, LinearLayout.LayoutParams.MATCH_PARENT);
         layoutParams.setMargins(screenWitdh/20,0,screenWitdh/20,0);
         this.setLayoutParams(layoutParams);
-
-
-
+//
         this.setBackgroundColor(Color.parseColor("#000000"));
 //        this.setBackground(Drawable.createFromPath());
     }

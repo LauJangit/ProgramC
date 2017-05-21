@@ -1,6 +1,7 @@
 package cn.jangit.programc.Activity.MainActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import cn.jangit.programc.Activity.LinearPractiseListActivity.LinearPractiseList
 import cn.jangit.programc.Activity.MockExamActivity.MockExamActivity;
 import cn.jangit.programc.Activity.RandomPracticeActivity.RandomPracticeActivity;
 import cn.jangit.programc.Activity.RankActivity.RankActivity;
+import cn.jangit.programc.Tool.Fonts;
 import cn.jangit.programc.User.User;
 import cn.jangit.programc.R;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Fonts.customFont = Typeface.createFromAsset(this.getAssets(), "fonts/pianpian.otf");
 
         //Linear Practice Button
         ImageButton linear_practice_btn=(ImageButton)findViewById(R.id.linear_practice_btn);
