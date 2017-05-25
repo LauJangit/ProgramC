@@ -9,9 +9,9 @@ import android.widget.ImageButton;
 
 import cn.jangit.programc.Activity.LinearPractiseListActivity.LinearPractiseListActivity;
 import cn.jangit.programc.Activity.MockExamActivity.MockExamActivity;
-import cn.jangit.programc.Activity.RandomPracticeActivity.RandomPracticeActivity;
 import cn.jangit.programc.Activity.RankActivity.RankActivity;
 import cn.jangit.programc.Tool.Fonts;
+import cn.jangit.programc.Tool.TopicInterpreter.TopicInterpreter;
 import cn.jangit.programc.User.User;
 import cn.jangit.programc.R;
 
@@ -21,8 +21,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //init
         Fonts.customFont = Typeface.createFromAsset(this.getAssets(), "fonts/pianpian.otf");
 
+
+        //
         //Linear Practice Button
         ImageButton linear_practice_btn=(ImageButton)findViewById(R.id.linear_practice_btn);
         linear_practice_btn.setOnClickListener(new View.OnClickListener() {
@@ -42,12 +45,25 @@ public class MainActivity extends AppCompatActivity {
         random_practice_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(User.isLogin()) {
-                    Intent intent = new Intent(MainActivity.this, RandomPracticeActivity.class);
-                    startActivity(intent);
-                }else{
-                    User.doLogin();
-                }
+                String xml="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                        "<programc>\n" +
+                        "    <topic type=\"choice\">\n" +
+                        "        <question><![CDATA[aaaaaaaaaaaaaaaaaaaa]]></question>\n" +
+                        "        <question><![CDATA[aaaaaaaaaaaaaaaaaaaa]]></question>\n" +
+                        "        <answer isCorrent=\"false\"><![CDATA[aaaaaa]]></answer>\n" +
+                        "        <answer isCorrent=\"true\"><![CDATA[bbbbbb]]></answer>\n" +
+                        "        <answer isCorrent=\"false\"><![CDATA[cccccc]]></answer>\n" +
+                        "        <answer isCorrent=\"false\"><![CDATA[dddddd]]></answer>\n" +
+                        "    </topic>\n" +
+                        "    <topic type=\"other\"><![CDATA[baidu.com]]></topic>\n" +
+                        "</programc>";
+                TopicInterpreter topicInterpreter=new TopicInterpreter(xml);
+//                if(User.isLogin()) {
+//                    Intent intent = new Intent(MainActivity.this, RandomPracticeActivity.class);
+//                    startActivity(intent);
+//                }else{
+//                    User.doLogin();
+//                }
             }
         });
 

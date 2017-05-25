@@ -19,6 +19,11 @@ public class LinearPractiseListActivity extends AppCompatActivity {
         list_section.addView(new ChapterButton(this));
         list_section.addView(new ChapterButton(this));
         list_section.addView(new ChapterButton(this));
+        list_section.addView(new ChapterButton(this));
+        list_section.addView(new ChapterButton(this));
+        list_section.addView(new ChapterButton(this));
+        list_section.addView(new ChapterButton(this));
+        list_section.addView(new ChapterButton(this));
 
     }
 }

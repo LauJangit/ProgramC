@@ -16,6 +16,7 @@ import cn.jangit.programc.Activity.Component.PersonalInf;
  */
 
 public class ListViewAdapter extends BaseAdapter {
+    //set an arraylist in order to make function addPersonalInf
     private ArrayList<PersonalInf> aListItems=new ArrayList<PersonalInf>();
     private PersonalInf[] listItems;
     public void addPersonalInf(PersonalInf inf){
@@ -35,12 +36,10 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        // TODO Auto-generated method stub
         return listItems.length;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         convertView = listItems[position];
         if(convertView==null){
             convertView.setTag(listItems[position]);
