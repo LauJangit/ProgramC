@@ -4,6 +4,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import java.util.Vector;
+
 /**
  * Created by jangitlau on 2017/5/25.
  */
