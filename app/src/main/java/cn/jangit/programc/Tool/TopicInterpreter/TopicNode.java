@@ -29,6 +29,7 @@ public class TopicNode{
     private void doTypeChioce(Node node){
         NodeList nodeList=node.getChildNodes();
 
+
     }
 
     private void doTypeOther(Node node){
