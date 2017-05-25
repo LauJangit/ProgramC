@@ -47,17 +47,29 @@ public class TopicInterpreter {
     }
 
     public Object getNextTopic() {
-        cursor++;
-        return topicList.get(cursor);
+        if (cursor + 1 >= 0) {
+            cursor--;
+            return topicList.get(cursor);
+        } else {
+            return null;
+        }
     }
 
     public Object getPrevTopic() {
-        cursor--;
-        return topicList.get(cursor);
+        if (cursor - 1 >= 0) {
+            cursor--;
+            return topicList.get(cursor);
+        } else {
+            return null;
+        }
     }
 
     public Object getTopic(int _Index) {
-        return topicList.get(_Index);
+        if (_Index >= 0 && _Index < getSize()) {
+            return topicList.get(cursor);
+        } else {
+            return null;
+        }
     }
 
     public void setCursor(int _Cursor){
