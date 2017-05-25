@@ -28,7 +28,6 @@ public class TopicNode{
 
     private void doTypeChioce(Node node){
         NodeList nodeList=node.getChildNodes();
-        System.out.println(nodeList.getLength());
 
     }
 

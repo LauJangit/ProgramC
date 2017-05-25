@@ -55,7 +55,7 @@ public class TopicInterpreter {
     }
 
     public int getTopic(int _Index){
-        return 0;
+        return 1;
     }
 
     public void setCursor(int _Cursor){

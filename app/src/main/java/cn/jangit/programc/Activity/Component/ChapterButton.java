@@ -24,5 +24,6 @@ public class ChapterButton extends ImageButton{
 //
         this.setBackgroundColor(Color.parseColor("#000000"));
 //        this.setBackground(Drawable.createFromPath());
+
     }
 }

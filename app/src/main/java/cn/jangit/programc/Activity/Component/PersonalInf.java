@@ -58,11 +58,9 @@ public class PersonalInf extends RelativeLayout{
         stuIDTextViewParams.setMargins(550, 140, 0, 0);//left, top, right, bottom
         stuIDTextView .setLayoutParams(stuIDTextViewParams);
 
-
         this.addView(rankImageView);
         this.addView(imageView);
         this.addView(levelTextView);
         this.addView(stuIDTextView);
-
     }
 }

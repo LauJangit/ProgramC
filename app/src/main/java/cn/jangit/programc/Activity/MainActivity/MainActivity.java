@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
         //init
         Fonts.customFont = Typeface.createFromAsset(this.getAssets(), "fonts/pianpian.otf");
 
-
-        //
+        //init end
         //Linear Practice Button
         ImageButton linear_practice_btn=(ImageButton)findViewById(R.id.linear_practice_btn);
         linear_practice_btn.setOnClickListener(new View.OnClickListener() {
