@@ -14,6 +14,7 @@ import java.util.Vector;
 public class TopicNode{
     String attributeType="type";
     ArrayList<Object> data = new ArrayList<Object>();
+    String uri = "";
     public TopicNode(Node node){
         NamedNodeMap namedNodeMap = node.getAttributes();
         Node namedNode=namedNodeMap.getNamedItem(attributeType);
@@ -29,7 +30,7 @@ public class TopicNode{
     }
 
     public Object get() {
-        return data;
+        return uri == null ? data : uri;
     }
 
     private void doTypeChioce(Node node){
@@ -48,7 +49,7 @@ public class TopicNode{
     }
 
     private void doTypeOther(Node node){
-        String nodeValue=node.getFirstChild().getNodeValue();
+        this.uri = node.getFirstChild().getNodeValue();
     }
 
 

@@ -40,29 +40,31 @@ public class TopicInterpreter {
             for(int count=0;count<topicNodeList.getLength();count++){
                 topicList.add(new TopicNode(topicNodeList.item(count)));
             }
+            this.size = topicList.size();
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
 
-    public int getNextTopic(){
-        return 0;
+    public Object getNextTopic() {
+        cursor++;
+        return topicList.get(cursor);
     }
 
-    public int getPrevTopic(){
-        return 0;
+    public Object getPrevTopic() {
+        cursor--;
+        return topicList.get(cursor);
     }
 
-    public int getTopic(int _Index){
-        return 1;
+    public Object getTopic(int _Index) {
+        return topicList.get(_Index);
     }
 
     public void setCursor(int _Cursor){
-
+        this.cursor = _Cursor;
     }
 
     public int getSize(){
-        return 0;
+        return this.size;
     }
 }
